@@ -1,0 +1,8 @@
+{
+  "name": "Pitu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mattheusxavier/Pitu.git",
+  "author": "Matheus Xavier <mattheus.x.a@gmail.com>",
+  "license": "MIT"
+}
