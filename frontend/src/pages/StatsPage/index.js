@@ -8,6 +8,10 @@ import { StatsBox, StatsBoxTitle, StatsContainer, StatsRow } from './styles'
 
 import { FaExclamationTriangle } from 'react-icons/fa'
 
+import { parseISO, formatRelative } from 'date-fns'
+
+import ptBR from 'date-fns/locale/pt-BR'
+
 import vars from '../../configs/vars'
 class StatsPage extends React.Component {
     constructor(props) {
@@ -26,6 +30,15 @@ class StatsPage extends React.Component {
         try {
             const service = new ShortenerService()
             const shortenedURL = await service.getStats(code)
+
+            const parsedDate = parseISO(shortenedURL.updatedAt)
+            const currentDate = new Date()
+
+            const relativeDate = formatRelative(parsedDate, currentDate, {
+                locale: ptBR
+            }) 
+
+            shortenedURL.relativeDate = relativeDate
 
             this.setState({ isLoading: false, shortenedURL })
         } catch (error) {
