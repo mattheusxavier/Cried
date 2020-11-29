@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route, Router } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import HomePage from '../pages/HomePage'
 import RedirectPage from '../pages/RedirectPage'
