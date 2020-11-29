@@ -2,7 +2,7 @@ import baseAPI from './api'
 
 class ShortenerService {
     constructor() {
-        this.api = baseAPI('http://localhost:3001/')
+        this.api = baseAPI('https://cried.herokuapp.com/')
     }
 
     async getLink(code) {

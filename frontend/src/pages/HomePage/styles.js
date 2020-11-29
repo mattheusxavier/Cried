@@ -14,3 +14,11 @@ export const Form = styled.form`
     border-radius: .25rem;
     text-align: center;
 `
+export const AdsBlock = styled.div`
+    border: solid 1px #F7F7F7;
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 2rem;
+    flex: 0 0 80%;
+    max-width: 80%;
+`

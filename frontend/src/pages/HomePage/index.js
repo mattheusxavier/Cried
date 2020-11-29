@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, InputGroup, FormControl, Button, Alert, Spinner } from 'react-bootstrap'
 
 import Header from '../../components/Header'
-import { ContentContainer, Form } from './styles'
+import { ContentContainer, Form, AdsBlock } from './styles'
 import ShortnerService from '../../services/shortnerService'
 class HomePage extends React.Component {
     constructor(props) {
@@ -71,19 +71,22 @@ class HomePage extends React.Component {
                                     <InputGroup className="mb-3">
                                         <FormControl 
                                             autoFocus={true}
-                                            defaultValue={`https://pitu.tk/${code}`}
+                                            defaultValue={`https://cried.tk/${code}`}
                                             ref={(input) => this.inputURL = input}
                                         />
                                         <InputGroup.Append>
                                             <Button variant="outline-secondary" onClick={() => this.copyToClipboard()}> Copiar </Button>
                                         </InputGroup.Append>                                
                                     </InputGroup>
-                                    <p>Para acompanhar as estatíticas, acesse https://pitu.tk/{code}/stats</p>
+                                    <p>Para acompanhar as estatíticas, acesse https://cried.tk/{code}/stats</p>
                                 </>
                             )
                         )}
                         {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
                     </Form>
+                </ContentContainer>
+                <ContentContainer>
+                    <AdsBlock> Adsense </AdsBlock>
                 </ContentContainer>
             </Container>
         )
